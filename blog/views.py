@@ -11,9 +11,6 @@ class PostListView(ListView):
     paginate_by = 3
     template_name = 'blog/post/list.html'
     
-
-
-
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post,
                         status='published',
